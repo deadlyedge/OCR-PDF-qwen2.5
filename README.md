@@ -23,20 +23,10 @@ after testing the performance of the models, the results are as follows:
 (I use nvidia 4080 for testing)
 
 ## Installation
-To install the necessary dependencies, run the following command:
+To install the necessary dependencies, ~~run the following command~~ I'm not giving a requirements.txt file, because different model requires different, so you can install the dependencies by yourself. (You can use conda to create a new environment and install the dependencies), note that if you want to use GPU, you need to install the corresponding CUDA version (https://pytorch.org/get-started/locally/).
 
-```bash
-pip install -r requirements.txt
-```
-
-## Usage
-To extract text from a PDF file, use the following command:
-
-```bash
-python main.py <path_to_pdf>
-```
-
-Replace `<path_to_pdf>` with the path to your PDF file.
+## References
+- [Qwen Full Page OCR](https://github.com/QwenLM/Qwen2.5-VL/blob/main/cookbooks/ocr.ipynb)
 
 ## Contributing
 Contributions are welcome! Please submit a pull request or open an issue for any enhancements or bug fixes.
