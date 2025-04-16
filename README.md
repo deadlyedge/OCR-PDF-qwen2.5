@@ -1,4 +1,4 @@
-# OCR-PDF Project
+# OCR-PDF Project(AI Vision)
 
 ## Overview
 The OCR-PDF project is designed to extract text from PDF documents using Optical Character Recognition (OCR) techniques. This project leverages various OCR models to provide accurate and efficient text extraction.
@@ -23,7 +23,7 @@ after testing the performance of the models, the results are as follows:
 (I use nvidia 4080 for testing)
 
 ## Installation
-To install the necessary dependencies, ~~run the following command~~ I'm not giving a requirements.txt file, because different model requires different, so you can install the dependencies by yourself. (You can use conda to create a new environment and install the dependencies), note that if you want to use GPU, you need to install the corresponding CUDA version (https://pytorch.org/get-started/locally/).
+To install the necessary dependencies, ~~run the following command~~ I'm not giving a requirements.txt file, because different model requires different, so you can install the dependencies by yourself. (You can use conda to create a new environment and install the dependencies, python 3.11 are recommended), note that if you want to use GPU, you need to install the corresponding CUDA version (https://pytorch.org/get-started/locally/).
 
 ## References
 - [Qwen Full Page OCR](https://github.com/QwenLM/Qwen2.5-VL/blob/main/cookbooks/ocr.ipynb)

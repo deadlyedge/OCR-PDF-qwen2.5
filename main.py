@@ -9,6 +9,8 @@ from pdf2image import convert_from_path
 from transformers import Qwen2_5_VLForConditionalGeneration, AutoProcessor
 from modelscope import snapshot_download
 
+OCR_GOAL = "这是一份试卷，请以markdown格式输出正确答案."
+# OCR_GOAL = "Please output all text content from the image without any additional descriptions or formatting."
 
 # download model
 model_dir = snapshot_download("Qwen/Qwen2.5-VL-3B-Instruct")
@@ -107,7 +109,7 @@ def process_pdf(pdf_path, output_path):
                 recognized_text = inference(
                     image,
                     image_path,
-                    prompt="Please output all text content from the image without any additional descriptions or formatting.",
+                    prompt=OCR_GOAL,
                 )
                 extracted_text.append({"page": page_number, "content": recognized_text})
 
@@ -134,7 +136,7 @@ def main():
     print("********************************\n")
 
     # Prompt user for the PDF file path
-    pdf_path = "data/厌恶及其他mini.pdf"
+    pdf_path = "data/middle.school.tests.pdf"
     # pdf_path = input("Enter the full path to the PDF file: ").strip()
 
     if not path.isfile(pdf_path):
